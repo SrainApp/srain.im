@@ -1,1 +1,9 @@
+baseurl:
+name: Srain
+title: Srain
+description: Modern, beautiful IRC client written in GTK+ 3.
+encoding: utf-8
 theme: jekyll-theme-cayman
+markdown: kramdown
+kramdown:
+    input: GFM
