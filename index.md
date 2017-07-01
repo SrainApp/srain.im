@@ -28,6 +28,7 @@
     yaourt -S srain     # latest release
 
 or:
+
     # Add archlinuxcn mirror, then
     pacman -S archlinuxcn/srain-git
 
