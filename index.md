@@ -1,72 +1,41 @@
-**Note:** Srain is still under development.
+Modern, beautiful IRC client written in GTK+ 3.
 
-## Dependencies
+[Home page](https://srain.im) |
+[Documentation](https://doc.srain.im) |
+[Download]( https://github.com/SilverRainZ/srain/releases) |
+[Source code](https://github.com/SilverRainZ/srain)
 
-- make          (makedepends)
-- gcc           (makedepends)
-- pkg-config    (makedepends)
-- gettext       (makedepends)
-- imagemagick   (makedepends)
-- gtk >= 3.16
-- python >= 3.2
-- libcurl
-- libnotify
-- libconfig
+Features
+========
 
-## Build & Debug
-
-    mkdir build
-    ./configure --prefix=$PWD/build --config-dir=$PWD/build/etc --enable-debug
-    make
-    make run
-
-## Install
-
-### Arch Linux
-
-    yaourt -S srain-git # git version
-    yaourt -S srain     # latest release
-
-or:
-
-    # Add archlinuxcn mirror, then
-    pacman -S archlinuxcn/srain-git
-
-### Gentoo
-
-Look at the [Install Guide](https://github.com/rtlanceroad/gentoo-srain)
-
-### For Other Linux Distributions
-
-    # Intall the above dependencies, then
-    # Note: the configure script doesn't check dependiencies.
-    mkdir build
-    ./configure --prefix=/usr/local --config-dir=/etc --disable-debug
-    make
-    make DESTDIR=/ install
-
-## Feature
-
-- Beautiful User Interface
+- Fully open source
+- Beautiful and friendly interface
 - Relay bot message transform
-- Preview image from URL
-- Get avatar according to user's real name (plugin)
-- Auto upload image to pastebin (plugin)
+- Directly view image from URL
+- Supports python plugin, which implemented:
+  - Show avatar according to user's real name
+  - Upload image to pastebin
 
-## Screenshot
 
-As you see, its theme is inspired by Telegram Desktop.
+Screenshots
+===========
 
-![screenshot](http://img.tjm.moe/47/ceece073d29563da0c22ab6e8e8c3cdc534113.png)
+![](http://img.vim-cn.com/7b/c29632228006727102eb7f79efec9493aef807.png)
 
-## Need Help?
+Srain with avatar plugin and enable the relay transform function:
+
+![](http://img.vim-cn.com/7f/5211f94b8bcfabf16a852907bc76001ee321be.png)
+
+Need Help?
+==========
 
 Feel free to contact me if you have any question about srain.
 
-- **IRC Channel**: [#srain](irc://irc.freenode.net/srain) @ freenode
-- Email: silverrainz at outlook dot com
+- *IRC Channel*: [#srain](ircs://chat.freenode.org:6697/srain) @ freenode
+- E-mail: srain at srain dot im
 - Github: file an issue [Here](https://github.com/SilverRainZ/srain/issues)
 
-## License
+License
+=======
 
 GNU General Public License Version 3
