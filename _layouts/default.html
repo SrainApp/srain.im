@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+        <style>
+body {
+    padding-top: 50px;
+}
+.oversize {
+    max-height: 100%;
+    max-width: 100%;
+}
+.jumbotron {
+    color: white;
+    background-color: #b0c4de;
+    background-image: linear-gradient(#8db6cd, #b0c4de, #00000);
+}
+footer {
+    text-align: center;
+}
+        </style>
+
+        <title>{{ site.name }} - {{ site.project.description }}</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand text-capitalize" href="#">
+                        <img class="img-responsive oversize" alt="{{ site.project.name }}" src="{{ site.logo }}">
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#downloads">Downloads</a></li>
+                        <li><a href="{{ site.project.url }}">Source code</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="text-capitalize">
+                    {{ site.project.name }}
+                    <small>{{ site.project.releases[0].version }}</small>
+                </h1>
+                <p>{{ site.project.description }}</p>
+                <a class="btn btn-lg btn-primary" href="#downloads" role="button">Get Srain</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="container">
+            {{ site.project.readme.html }}
+            <hr>
+
+            <div class="container">
+                <h2 id="news">News</h2>
+                <p class="text-muted">The recently 2 releases:</p>
+                <div class="row show-gird">
+                    {% for i in (0..1) %}
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <h3>{{ site.project.releases[i].version }} <small>{{ site.project.releases[i].date | date_to_string }}</small></h3>
+                        <p>{{ site.project.releases[i].notes | markdownify }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <hr>
+
+            <h2 id="downloads">Downloads</h2>
+            <div class="alert alert-info" role="alert">
+                <strong>Notes: </strong>
+                <p>Work in progress...</p>
+            </div>
+
+
+        </div> <!-- /container -->
+
+        <footer class="footer">
+            <div class="container">
+                <p class="text-muted">2016 - {{ site.time | date:"%Y" }} ©
+                <a href="{{ site.project.owner.url }}">{{ site.project.owner.name }}</a>
+                | Powered by <a href="https://jekyllrb.com/">Jekyll</a>
+                &amp; <a href="https://github.com/SilverRainZ/jekyll-hg">Jekyll HG</a>
+                &amp; <a href="https://getbootstrap.com/">Bootstrap</a>
+                </p>
+            </div>
+        </footer>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>
