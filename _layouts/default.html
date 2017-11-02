@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Bootstrap -->
-        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{ site.baseurl }}/assets/yeti/bootstrap.min.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -16,7 +16,6 @@
 
         <style>
 body {
-    padding-top: 50px;
 }
 .oversize {
     max-height: 100%;
@@ -25,7 +24,11 @@ body {
 .jumbotron {
     color: white;
     background-color: #b0c4de;
-    background-image: linear-gradient(#8db6cd, #b0c4de, #00000);
+    background-image: linear-gradient(#8db6cd, #b0c4de);
+}
+.jumbotron small {
+    color: #888888;
+    font-size: 45%;
 }
 footer {
     text-align: center;
@@ -111,8 +114,8 @@ footer {
         </footer>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/jqurey/1.12.4/jquery.min.js "></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="{{ site.baseurl }}/assets/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </body>
 </html>
