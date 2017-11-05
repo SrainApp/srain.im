@@ -1,8 +1,13 @@
+body {
+    padding-top: 40px;
+}
+
 code {
     color: #fefefe;
-    background-color: #8db6cd; 
+    background-color: #8db6cd;
     border-radius: 2px;
 }
+
 .oversize {
     max-height: 100%;
     max-width: 100%;
@@ -18,7 +23,7 @@ code {
     font-size: 45%;
 }
 .jumbotron h1 {
-    text-shadow: 2px 2px 0px #4a88ab; 
+    text-shadow: 2px 2px 0px #4a88ab;
 }
 
 footer {
