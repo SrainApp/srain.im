@@ -2,8 +2,9 @@
 <html lang="en-US">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+        <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/SilverRainZ/srain/master/data/icons/raw/srain.png" />
         <!-- Bootstrap -->
         <link href="/assets/yeti/bootstrap.min.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -12,33 +13,12 @@
             <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
             <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-
-
-        <style>
-body {
-}
-.oversize {
-    max-height: 100%;
-    max-width: 100%;
-}
-.jumbotron {
-    color: white;
-    background-color: #b0c4de;
-    background-image: linear-gradient(#8db6cd, #b0c4de);
-}
-.jumbotron small {
-    color: #888888;
-    font-size: 45%;
-}
-footer {
-    text-align: center;
-}
-        </style>
+        <link href="/assets/style.css" rel="stylesheet">
 
         <title>Srain - Modern, beautiful IRC client written in GTK+ 3.</title>
     </head>
     <body>
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class ="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
@@ -54,15 +34,18 @@ footer {
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#screenshots">Screenshots</a></li>
                         <li><a href="#news">News</a></li>
                         <li><a href="#downloads">Downloads</a></li>
+                        <li><a href="https://doc.srain.im">Documentation</a></li>
                         <li><a href="https://github.com/SilverRainZ/srain">Source code</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
         </nav>
 
-        <div class="jumbotron">
+        <header class="jumbotron">
             <div class="container">
                 <h1 class="text-capitalize">
                     srain
@@ -72,10 +55,14 @@ footer {
                 <a class="btn btn-lg btn-primary" href="#downloads" role="button">Get Srain</a>
                 </p>
             </div>
-        </div>
+        </header>
 
-        <div class="container">
-            <div class="announce instapaper_body rst" data-path="README.rst" id="readme"><article class="markdown-body entry-content" itemprop="text"><h1><a href="#srain" aria-hidden="true" class="anchor" id="user-content-srain"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Srain</h1>
+        <main class="container">
+            <section id="introduction" class="container">
+                <div class="page-header">
+                    <h1>Introduction</h1>
+                </div>
+                <div class="announce instapaper_body rst" data-path="README.rst" id="readme"><article class="markdown-body entry-content" itemprop="text"><h1><a href="#srain" aria-hidden="true" class="anchor" id="user-content-srain"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Srain</h1>
 <p>Modern, beautiful IRC client written in GTK+ 3.</p>
 <p><a href="https://srain.im">Home</a> | <a href="https://doc.srain.im">Documentation</a> | <a href="https://github.com/SilverRainZ/srain/releases">Download</a> | <a href="https://github.com/SilverRainZ/srain">Source code</a></p>
 <a name="user-content-features"></a>
@@ -113,15 +100,37 @@ footer {
 <p>GNU General Public License Version 3</p>
 
 </article></div>
-            <hr>
+            </section>
 
-            <div class="container">
-                <h2 id="news">News</h2>
+            <section id="screenshots" class="container">
+                <div class="page-header">
+                    <h1>Screenshots</h1>
+                </div>
+                <div class="row">
+                    
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <a href="https://raw.githubusercontent.com/SilverRainZ/srain/master/doc/_static/srain-joined-channel.png" class="thumbnail">
+                            <img src="https://raw.githubusercontent.com/SilverRainZ/srain/master/doc/_static/srain-joined-channel.png" alt="https://raw.githubusercontent.com/SilverRainZ/srain/master/doc/_static/srain-joined-channel.png"/>
+                        </a>
+                    </div>
+                    
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <a href="https://raw.githubusercontent.com/SilverRainZ/srain/master/doc/_static/srain-searched-chennel.png" class="thumbnail">
+                            <img src="https://raw.githubusercontent.com/SilverRainZ/srain/master/doc/_static/srain-searched-chennel.png" alt="https://raw.githubusercontent.com/SilverRainZ/srain/master/doc/_static/srain-searched-chennel.png"/>
+                        </a>
+                    </div>
+                    
+                </div>
+            </section>
+            <section id="news" class="container">
+                <div class="page-header">
+                    <h1>News</h1>
+                </div>
                 <p class="text-muted">The recently 2 releases:</p>
                 <div class="row show-gird">
                     
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                        <h3>0.06.2 <small>12 Sep 2017</small></h3>
+                        <h2>0.06.2 <small>12 Sep 2017</small></h2>
                         <p><p>Original: http://doc.srain.im/en/latest/changelog.html#version-0-06-2</p>
 
 <ul>
@@ -150,7 +159,7 @@ while operation is not successful</li>
                     </div>
                     
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                        <h3>0.06.1 <small>18 Aug 2017</small></h3>
+                        <h2>0.06.1 <small>18 Aug 2017</small></h2>
                         <p><p>Original: http://doc.srain.im/en/latest/changelog.html#version-0-06-1</p>
 
 <ul>
@@ -183,18 +192,19 @@ then try to connect again. If it still fails, waiting time will increase by
                     </div>
                     
                 </div>
-            </div>
+            </section>
 
-            <hr>
-
-            <h2 id="downloads">Downloads</h2>
-            <div class="alert alert-info" role="alert">
-                <strong>Notes: </strong>
-                <p>Work in progress...</p>
-            </div>
-
-
-        </div> <!-- /container -->
+            <section id="downloads" class="container">
+                <div class="page-header">
+                    <h1>Downloads</h1>
+                </div>
+                <p>
+                There is not available percompiled package for
+                <span class="text-capitalize">srain</span> yet, please refer to the
+                <a href="https://doc.srain.im/en/stable/installation.html">installation guide</a>
+                </p>
+            </section>
+        </main> <!-- /container -->
 
         <footer class="footer">
             <div class="container">
@@ -208,7 +218,7 @@ then try to connect again. If it still fails, waiting time will increase by
         </footer>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="/assets/jqurey/1.12.4/jquery.min.js "></script>
+        <script src="/assets/jqurey/1.12.4/jquery.min.js "></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="/assets/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </body>
