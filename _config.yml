@@ -1,9 +1,16 @@
+# Site configurations
 baseurl:
-name: Srain
-logo: https://raw.githubusercontent.com/SilverRainZ/srain/master/data/icons/raw/srain.png
-github: SilverRainZ/srain
 exclude:
     - LICENSE
     - README
     - Makefile
     - _hg
+
+# Repositoriy informations
+name: Srain
+github: SilverRainZ/srain
+logo: https://raw.githubusercontent.com/SilverRainZ/srain/master/data/icons/raw/srain.png
+documentation: https://doc.srain.im
+screenshots:
+    - https://raw.githubusercontent.com/SilverRainZ/srain/master/doc/_static/srain-joined-channel.png
+    - https://raw.githubusercontent.com/SilverRainZ/srain/master/doc/_static/srain-searched-chennel.png

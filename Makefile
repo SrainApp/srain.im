@@ -2,6 +2,7 @@ commit:
 	jekyll build
 	git checkout gh-pages
 	mv _site/* . && \
+		git pull && \
 		git add . && \
 		git commit -m "Auto generated at $(shell date +'%F %T')" && \
 		git push

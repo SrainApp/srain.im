@@ -1,0 +1,33 @@
+code {
+    color: #fefefe;
+    background-color: #8db6cd; 
+    border-radius: 2px;
+}
+.oversize {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.jumbotron {
+    color: white;
+    background-color: #b0c4de;
+    background-image: linear-gradient(#8db6cd, #b0c4de);
+}
+.jumbotron small {
+    color: #fefefe;
+    font-size: 45%;
+}
+.jumbotron h1 {
+    text-shadow: 2px 2px 0px #4a88ab; 
+}
+
+footer {
+    text-align: center;
+}
+
+/* Content of introduction is html of README which fetched from github, hide
+ * the main title and remove some duplicated.
+ */
+#introduction article > h1, article > h1 + p, article > h1 + p + p {
+    display: none;
+}
