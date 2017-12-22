@@ -49,7 +49,7 @@
             <div class="container">
                 <h1 class="text-capitalize">
                     srain
-                    <small>0.06.2</small>
+                    <small>0.06.3</small>
                 </h1>
                 <p>Modern, beautiful IRC client written in GTK+ 3.</p>
                 <a class="btn btn-lg btn-primary" href="#downloads" role="button">Get Srain</a>
@@ -64,7 +64,7 @@
                 </div>
                 <div class="announce instapaper_body rst" data-path="README.rst" id="readme"><article class="markdown-body entry-content" itemprop="text"><h1><a href="#srain" aria-hidden="true" class="anchor" id="user-content-srain"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Srain</h1>
 <p>Modern, beautiful IRC client written in GTK+ 3.</p>
-<p><a href="https://srain.im">Home</a> | <a href="https://doc.srain.im">Documentation</a> | <a href="https://github.com/SilverRainZ/srain/releases">Download</a> | <a href="https://github.com/SilverRainZ/srain">Source code</a></p>
+<p><a href="https://srain.im" rel="nofollow">Home</a> | <a href="https://doc.srain.im" rel="nofollow">Documentation</a> | <a href="https://github.com/SilverRainZ/srain/releases">Download</a> | <a href="https://github.com/SilverRainZ/srain">Source code</a></p>
 <a name="user-content-features"></a>
 <h2><a href="#features" aria-hidden="true" class="anchor" id="user-content-features"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Features</h2>
 <ul>
@@ -130,6 +130,49 @@
                 <div class="row show-gird">
                     
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <h2>0.06.3 <small>22 Dec 2017</small></h2>
+                        <p><p><a href="">Original changelog</a></p>
+
+<ul>
+  <li>
+    <p>Changed:</p>
+
+    <ul>
+      <li>Configurable file option <code class="highlighter-rouge">tls_not_verify</code> in <code class="highlighter-rouge">irc</code> block in <code class="highlighter-rouge">server</code>
+block is renamed to <code class="highlighter-rouge">tls_noverify</code>, old option name is still supported</li>
+      <li>Command option <code class="highlighter-rouge">tls-not-verify</code> for <code class="highlighter-rouge">/server</code> and
+<code class="highlighter-rouge">/connect</code> is renamed to <code class="highlighter-rouge">tls-noverify</code>, old option name
+is still supported</li>
+    </ul>
+  </li>
+  <li>
+    <p>Added:</p>
+
+    <ul>
+      <li>Connect popover supports connect to predefined server</li>
+      <li>Join popover supports channel search</li>
+    </ul>
+  </li>
+  <li>
+    <p>Improved:</p>
+
+    <ul>
+      <li>Modified margin and padding of some widgets</li>
+      <li>Improved the style of unread message counter</li>
+      <li>Fixed markup parse error of decorator</li>
+      <li>Fixed crashing while connecting from connect popover</li>
+      <li>Fixed use after free while removing user</li>
+      <li>Improved the performance and extensibility of user list</li>
+      <li>Improved compatibility with older versions of GTK(&gt; 3.16)</li>
+      <li>Refactor the code of chat panel, helpful for the next development</li>
+    </ul>
+  </li>
+</ul>
+
+</p>
+                    </div>
+                    
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                         <h2>0.06.2 <small>12 Sep 2017</small></h2>
                         <p><p><a href="http://doc.srain.im/en/latest/changelog.html#version-0-06-2">Original changelog</a></p>
 
@@ -152,39 +195,6 @@ while operation is not successful</li>
       <li>Fixed: in some cases, nickname registration will case infinity loop</li>
       <li>Decorator and filter now can process xml message</li>
       <li>Imporved the handling of channel topic</li>
-    </ul>
-  </li>
-</ul>
-</p>
-                    </div>
-                    
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                        <h2>0.06.1 <small>18 Aug 2017</small></h2>
-                        <p><p><a href="http://doc.srain.im/en/latest/changelog.html#version-0-06-1">Original changelog</a></p>
-
-<ul>
-  <li>
-    <p>Added:</p>
-
-    <ul>
-      <li>Added GPL copyright statements</li>
-      <li><code class="highlighter-rouge">RPL_CHANNEL_URL</code> (328) message support</li>
-      <li>Command line options support, type <code class="highlighter-rouge">srain -h</code> for help message</li>
-      <li>Support for Creating server and joining channel from IRC URL</li>
-      <li>New dependency libsoup</li>
-      <li>Add reconnect timer: if connection fails, Srain will wait for 5 seconds
-then try to connect again. If it still fails, waiting time will increase by
-5 second</li>
-    </ul>
-  </li>
-  <li>
-    <p>Improved:</p>
-
-    <ul>
-      <li>Fixed the crash when QUIT</li>
-      <li>Fixed: avoid sending empty password</li>
-      <li>More empty parameters checks</li>
-      <li>Imporve server connection status control</li>
     </ul>
   </li>
 </ul>
