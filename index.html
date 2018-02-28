@@ -49,7 +49,7 @@
             <div class="container">
                 <h1 class="text-capitalize">
                     srain
-                    <small>0.06.3</small>
+                    <small>0.06.4</small>
                 </h1>
                 <p>Modern, beautiful IRC client written in GTK+ 3.</p>
                 <a class="btn btn-lg btn-primary" href="#downloads" role="button">Get Srain</a>
@@ -62,7 +62,7 @@
                 <div class="page-header">
                     <h1>Introduction</h1>
                 </div>
-                <div class="announce instapaper_body rst" data-path="README.rst" id="readme"><article class="markdown-body entry-content" itemprop="text"><h1><a href="#srain" aria-hidden="true" class="anchor" id="user-content-srain"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Srain</h1>
+                <div class="announce instapaper_body rst" data-path="README.rst" id="readme"><article class="markdown-body entry-content" itemprop="text"><h1><a href="#srain-" aria-hidden="true" class="anchor" id="user-content-srain-"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Srain <a href="https://travis-ci.org/SilverRainZ/srain" rel="nofollow"><img alt="ci-status" src="https://camo.githubusercontent.com/4d4e48753bd3cfdfe81b994a8ea88901ef6e4a31/68747470733a2f2f7472617669732d63692e6f72672f53696c7665725261696e5a2f737261696e2e7376673f6272616e63683d6d6173746572" data-canonical-src="https://travis-ci.org/SilverRainZ/srain.svg?branch=master" style="max-width:100%;"></a></h1>
 <p>Modern, beautiful IRC client written in GTK+ 3.</p>
 <p><a href="https://srain.im" rel="nofollow">Home</a> | <a href="https://doc.srain.im" rel="nofollow">Documentation</a> | <a href="https://github.com/SilverRainZ/srain/releases">Download</a> | <a href="https://github.com/SilverRainZ/srain">Source code</a></p>
 <a name="user-content-features"></a>
@@ -130,6 +130,48 @@
                 <div class="row show-gird">
                     
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <h2>0.06.4 <small>01 Mar 2018</small></h2>
+                        <p><p><a href="http://doc.srain.im/en/0.06.3/changelog.html#version-0-06-4">Original changelog</a></p>
+
+<ul>
+  <li>Changed:
+    <ul>
+      <li>Change default application ID to <code class="highlighter-rouge">im.srain.Srain</code></li>
+    </ul>
+  </li>
+  <li>Added:
+    <ul>
+      <li>CTCP support, including request &amp; response CLIENTINFO, FINGER, PING, SOURCE, TIME, VERSION, USERINFO messages. DCC message is <strong>not</strong> yet supported. Use command <a href="http://doc.srain.im/en/latest/commands.html#commands-ctcp">/ctcp</a> for sending a CTCP request</li>
+      <li>Login method support, you can specify it by configuration file option <code class="highlighter-rouge">server.login_method</code>:
+        <ul>
+          <li><code class="highlighter-rouge">sasl_plain</code>: SASL PLAIN authentication support, will use <code class="highlighter-rouge">server.user.username</code> as identity, and use <code class="highlighter-rouge">server.user.passwd</code> as password</li>
+        </ul>
+      </li>
+      <li>Added documentation :doc:<code class="highlighter-rouge">support</code> used to show Srain’s features, inspried by https://ircv3.net/software/clients.html</li>
+      <li>Added a semantic version parser, not yet used</li>
+      <li>Added appdata file which requier by application store, thanks to @cpba</li>
+      <li>openSUSE package is available, please refer to <a href="http://doc.srain.im/en/latest/install/index.html#package-opensuse">openSUSE</a> for details, thanks to @alois</li>
+      <li>Flatpak package is available, please refer to <a href="http://doc.srain.im/en/latest/install/index.html#package-flatpak">Flatpak</a> for details, thanks to @cpba</li>
+    </ul>
+  </li>
+  <li>Improved:
+    <ul>
+      <li>Fixed a logical error in IRC message parser: all parameters are equal whether matched by <code class="highlighter-rouge">&lt;middle&gt;</code> or <code class="highlighter-rouge">&lt;trailing&gt;</code>, thanks to @DanielOaks</li>
+      <li>Improved connection state control, you can smoothly disconnect/quit from server even it is unresponsive</li>
+      <li>Fixed truncated message output by <a href="http://doc.srain.im/en/latest/commands.html#commands-server">/server</a> <code class="highlighter-rouge">list</code> subcommand</li>
+      <li>Fixed crash at <code class="highlighter-rouge">g_type_check_instance()</code> under GLib 2.54.3+</li>
+      <li>Fixed: Do not free a SrianServerBuffer which has non-empty buffer</li>
+      <li>Ensure the QUIT message can be sent before application shutdown</li>
+      <li>Removed entry from desktop file, thanks to @TingPing</li>
+      <li>Fixed grammer of join message, thanks to @raindev</li>
+      <li>Re-enable CI for Srain: <img src="https://travis-ci.org/SilverRainZ/srain.svg?branch=master" alt="ci-status" /></li>
+    </ul>
+  </li>
+</ul>
+</p>
+                    </div>
+                    
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                         <h2>0.06.3 <small>22 Dec 2017</small></h2>
                         <p><p><a href="http://doc.srain.im/en/0.06.3/changelog.html#version-0-06-3">Original changelog</a></p>
 
@@ -169,35 +211,6 @@ is still supported</li>
   </li>
 </ul>
 
-</p>
-                    </div>
-                    
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                        <h2>0.06.2 <small>12 Sep 2017</small></h2>
-                        <p><p><a href="http://doc.srain.im/en/0.06.2/changelog.html#version-0-06-2">Original changelog</a></p>
-
-<ul>
-  <li>
-    <p>Added:</p>
-
-    <ul>
-      <li>mIRC color support, can be configured via <code class="highlighter-rouge">render_mirc_color</code> option</li>
-    </ul>
-  </li>
-  <li>
-    <p>Improved:</p>
-
-    <ul>
-      <li>Better error reporting while operating the UI</li>
-      <li>IRC URL can be opened directly within the application</li>
-      <li>Text in input entry, connection panel and join panel will not be cleared
-while operation is not successful</li>
-      <li>Fixed: in some cases, nickname registration will case infinity loop</li>
-      <li>Decorator and filter now can process xml message</li>
-      <li>Imporved the handling of channel topic</li>
-    </ul>
-  </li>
-</ul>
 </p>
                     </div>
                     
