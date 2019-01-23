@@ -8,9 +8,9 @@ exclude:
 
 # Repositoriy informations
 name: Srain
-github: SilverRainZ/srain
-logo: https://raw.githubusercontent.com/SilverRainZ/srain/master/data/icons/raw/im.srain.Srain.png
+github: SrainApp/srain
+logo: https://raw.githubusercontent.com/SrainApp/srain/master/data/icons/raw/im.srain.Srain.png
 documentation: https://doc.srain.im
 screenshots:
-    - https://raw.githubusercontent.com/SilverRainZ/srain/master/doc/_static/srain-joined-channel.png
-    - https://raw.githubusercontent.com/SilverRainZ/srain/master/doc/_static/srain-searched-chennel.png
+    - https://raw.githubusercontent.com/SrainApp/srain/master/doc/_static/srain-joined-channel.png
+    - https://raw.githubusercontent.com/SrainApp/srain/master/doc/_static/srain-searched-chennel.png
