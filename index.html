@@ -49,7 +49,7 @@
             <div class="container">
                 <h1 class="text-capitalize">
                     srain
-                    <small>0.06.4</small>
+                    <small>1.0.0rc5</small>
                 </h1>
                 <p>Modern IRC client written in GTK.</p>
                 <a class="btn btn-lg btn-primary" href="https://flathub.org/apps/details/im.srain.Srain" role="button">Get Srain</a>
@@ -134,91 +134,30 @@
                 <div class="page-header">
                     <h1>News</h1>
                 </div>
-                <p class="text-muted">The recently 2 releases:</p>
+                <p class="text-muted">The recently 4 releases:</p>
                 <div class="row show-gird">
                     
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                        <h2>0.06.4 <small>01 Mar 2018</small></h2>
-                        <p><p><a href="http://doc.srain.im/en/0.06.4/changelog.html#version-0-06-4">Original changelog</a></p>
-
-<ul>
-  <li>Changed:
-    <ul>
-      <li>Change default application ID to <code class="highlighter-rouge">im.srain.Srain</code></li>
-    </ul>
-  </li>
-  <li>Added:
-    <ul>
-      <li>CTCP support, including request &amp; response CLIENTINFO, FINGER, PING, SOURCE, TIME, VERSION, USERINFO messages. DCC message is <strong>not</strong> yet supported. Use command <a href="http://doc.srain.im/en/latest/commands.html#commands-ctcp">/ctcp</a> for sending a CTCP request</li>
-      <li>Login method support, you can specify it by configuration file option <code class="highlighter-rouge">server.login_method</code>:
-        <ul>
-          <li><code class="highlighter-rouge">sasl_plain</code>: SASL PLAIN authentication support, will use <code class="highlighter-rouge">server.user.username</code> as identity, and use <code class="highlighter-rouge">server.user.passwd</code> as password</li>
-        </ul>
-      </li>
-      <li>Added documentation <a href="http://doc.srain.im/en/stable/support.html">Support Tables</a> used to show Srain’s features, inspried by <a href="https://ircv3.net/software/clients.html">IRCv3 Client Support</a></li>
-      <li>Added a semantic version parser, not yet used</li>
-      <li>Added appdata file which requier by application store, thanks to @cpba</li>
-      <li>openSUSE package is available, please refer to <a href="http://doc.srain.im/en/latest/install/index.html#package-opensuse">openSUSE</a> for details, thanks to @alois</li>
-      <li>Flatpak package is available, please refer to <a href="http://doc.srain.im/en/latest/install/index.html#package-flatpak">Flatpak</a> for details, thanks to @cpba</li>
-    </ul>
-  </li>
-  <li>Improved:
-    <ul>
-      <li>Fixed a logical error in IRC message parser: all parameters are equal whether matched by <code class="highlighter-rouge">&lt;middle&gt;</code> or <code class="highlighter-rouge">&lt;trailing&gt;</code>, thanks to @DanielOaks</li>
-      <li>Improved connection state control, you can smoothly disconnect/quit from server even it is unresponsive</li>
-      <li>Fixed truncated message output by <a href="http://doc.srain.im/en/latest/commands.html#commands-server">/server</a> <code class="highlighter-rouge">list</code> subcommand</li>
-      <li>Fixed crash at <code class="highlighter-rouge">g_type_check_instance()</code> under GLib 2.54.3+</li>
-      <li>Fixed: Do not free a SrianServerBuffer which has non-empty buffer</li>
-      <li>Ensure the QUIT message can be sent before application shutdown</li>
-      <li>Removed entry from desktop file, thanks to @TingPing</li>
-      <li>Fixed grammer of join message, thanks to @raindev</li>
-      <li>Re-enable CI for Srain: <img src="https://travis-ci.org/SilverRainZ/srain.svg?branch=master" alt="ci-status" /></li>
-    </ul>
-  </li>
-</ul>
+                        <h2>1.0.0rc5 <small>14 Jun 2019</small></h2>
+                        <p><p><a href="http://doc.srain.im/en/latest/changelog.html#version-1-0-0rc5">Release Note</a>.</p>
 </p>
                     </div>
                     
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                        <h2>0.06.3 <small>22 Dec 2017</small></h2>
-                        <p><p><a href="http://doc.srain.im/en/0.06.3/changelog.html#version-0-06-3">Original changelog</a></p>
-
-<ul>
-  <li>
-    <p>Changed:</p>
-
-    <ul>
-      <li>Configurable file option <code class="highlighter-rouge">tls_not_verify</code> in <code class="highlighter-rouge">irc</code> block in <code class="highlighter-rouge">server</code>
-block is renamed to <code class="highlighter-rouge">tls_noverify</code>, old option name is still supported</li>
-      <li>Command option <code class="highlighter-rouge">tls-not-verify</code> for <code class="highlighter-rouge">/server</code> and
-<code class="highlighter-rouge">/connect</code> is renamed to <code class="highlighter-rouge">tls-noverify</code>, old option name
-is still supported</li>
-    </ul>
-  </li>
-  <li>
-    <p>Added:</p>
-
-    <ul>
-      <li>Connect popover supports connect to predefined server</li>
-      <li>Join popover supports channel search</li>
-    </ul>
-  </li>
-  <li>
-    <p>Improved:</p>
-
-    <ul>
-      <li>Modified margin and padding of some widgets</li>
-      <li>Improved the style of unread message counter</li>
-      <li>Fixed markup parse error of decorator</li>
-      <li>Fixed crashing while connecting from connect popover</li>
-      <li>Fixed use after free while removing user</li>
-      <li>Improved the performance and extensibility of user list</li>
-      <li>Improved compatibility with older versions of GTK(&gt; 3.16)</li>
-      <li>Refactor the code of chat panel, helpful for the next development</li>
-    </ul>
-  </li>
-</ul>
-
+                        <h2>1.0.0rc4 <small>14 Jun 2019</small></h2>
+                        <p><p><a href="http://doc.srain.im/en/latest/changelog.html#version-1-0-0rc5">Release Note</a>.</p>
+</p>
+                    </div>
+                    
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <h2>1.0.0rc3 <small>14 Jun 2019</small></h2>
+                        <p><p><a href="http://doc.srain.im/en/latest/changelog.html#version-1-0-0rc3">Release Note</a>.</p>
+</p>
+                    </div>
+                    
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <h2>1.0.0rc2 <small>14 Jun 2019</small></h2>
+                        <p><p><a href="http://doc.srain.im/en/latest/changelog.html#version-1-0-0rc2">Release Note</a>.</p>
 </p>
                     </div>
                     
