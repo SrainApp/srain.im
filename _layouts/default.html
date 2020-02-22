@@ -33,10 +33,8 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#introduction">Introduction</a></li>
-                        <li><a href="#screenshots">Screenshots</a></li>
-                        <li><a href="#news">News</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/news.html">News</a></li>
                         <li><a href="https://flathub.org/apps/details/im.srain.Srain">Downloads</a></li>
                         <li><a href="{{ site.documentation }}">Documentation</a></li>
                         <li><a href="{{ site.project.url }}">Source code</a></li>
@@ -45,86 +43,7 @@
             </div>
         </nav>
 
-        <header class="jumbotron">
-            <div class="container">
-                <h1 class="text-capitalize">
-                    {{ site.project.name }}
-                    <small>{{ site.project.releases[0].version }}</small>
-                </h1>
-                <p>{{ site.project.description }}</p>
-                <a class="btn btn-lg btn-primary" href="https://flathub.org/apps/details/im.srain.Srain" role="button">Get Srain</a>
-                </p>
-            </div>
-        </header>
-
-        <main class="container">
-            <section id="introduction" class="container">
-                <div class="page-header">
-                    <h1>Introduction</h1>
-                </div>
-                {{ site.project.readme.html }}
-            </section>
-
-            <section id="screenshots" class="container">
-                <div class="page-header">
-                    <h1>Screenshots</h1>
-                </div>
-                <div class="row">
-                    {% for s in site.screenshots %}
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                        <a href="{{ s }}" class="thumbnail">
-                            <img src="{{ s }}" alt="{{ s }}"/>
-                        </a>
-                    </div>
-                    {% endfor %}
-                </div>
-            </section>
-            <section id="news" class="container">
-                <div class="page-header">
-                    <h1>News</h1>
-                </div>
-                <div class="row show-gird">
-                    {% comment %}
-                    FIXME: As https://shopify.github.io/liquid/tags/variable/ said,
-                    initial value of incrementis 0, but actually it is 1,
-                    use additional decrement to fix value to 0 for now.
-                    {% endcomment %}
-                    {% capture _ %}{% decrement new_release_index %}{% endcapture %}
-                    {% capture _ %}{% decrement new_post_index %}{% endcapture %}
-                    {% capture _ %}{% increment new_release_index %}{% endcapture %}
-                    {% capture _ %}{% increment new_post_index %}{% endcapture %}
-                    {% for i in (0..3) %}
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    {% capture release_time %}{{ site.project.releases[new_release_index].date | date: '%s' }}{% endcapture %}
-                    {% capture post_time %}{{ site.posts[new_post_index].date | date: '%s' }}{% endcapture %}
-                    {% if release_time > post_time %}
-                    {% assign release = site.project.releases[new_release_index] %}
-                        <h2>{{ release.version }} <small>{{ release.date | date_to_string }}</small></h2>
-                        <p>{{ release.notes | markdownify }}</p>
-                    {% capture _ %}{% increment new_release_index %}{% endcapture %}
-                    {% else %}
-                    {% assign post = site.posts[new_post_index] %}
-                        <h2><a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date_to_string }}</small></h2>                        <p> {{ post.excerpt | strip_html }} </p>
-                    {% capture _ %}{% increment new_post_index %}{% endcapture %}
-                    {% endif %}
-                    </div>
-                    {% endfor %}
-                </div>
-            </section>
-
-            <!--
-            <section id="downloads" class="container">
-                <div class="page-header">
-                    <h1>Downloads</h1>
-                </div>
-                <p>
-                There is not available percompiled package for
-                <span class="text-capitalize">{{ site.project.name }}</span> yet, please refer to the
-                <a href="{{ site.documentation }}/en/stable/installation.html">installation guide</a>
-                </p>
-            </section>
-            -->
-        </main> <!-- /container -->
+        {{ content }} 
 
         <footer class="footer">
             <div class="container">
