@@ -25,9 +25,14 @@ code {
 .jumbotron h1 {
     text-shadow: 2px 2px 0px #4a88ab;
 }
-
-footer {
-    text-align: center;
+.jumbotron table {
+    font-size: 100%;
+}
+.jumbotron table a {
+    color: #fefefe;
+}
+.jumbotron table td:nth-child(1) {
+    color: #4a88ab;
 }
 
 /* Content of introduction is html of README which fetched from github, hide

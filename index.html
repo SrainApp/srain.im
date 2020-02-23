@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<header class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="text-capitalize">
+                    {{ site.project.name }}
+                    <small>{{ site.project.releases[0].version }}</small>
+                </h1>
+                <p>{{ site.project.description }}</p>
+                <a class="btn btn-lg btn-primary" href="{{ site.download }}" role="button">Get Srain</a>
+                </p>
+                <p>Recent news:</p>
+                {% include recent-news number=6 %}
+            </div>
+            <div class="col-md-8">
+                <image src="{{ site.baseurl }}/assets/screenshots/cover.png" style="height: 100%; width: 100%; object-fit: contain"/>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <section id="introduction">
+        <div class="page-header">
+            <h1>Introduction</h1>
+        </div>
+        {{ site.project.readme.html }}
+    </section>
+</main>

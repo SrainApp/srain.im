@@ -1,0 +1,34 @@
+{% comment %}
+FIXME: As https://shopify.github.io/liquid/tags/variable/ said,
+initial value of incrementis 0, but actually it is 1,
+use additional decrement to fix value to 0 for now.
+{% endcomment %}
+{% capture _ %}{% decrement recent_new_release_index %}{% endcapture %}
+{% capture _ %}{% decrement recent_new_post_index %}{% endcapture %}
+{% capture _ %}{% increment recent_new_release_index %}{% endcapture %}
+{% capture _ %}{% increment recent_new_post_index %}{% endcapture %}
+<table>
+    <tbody>
+        {% for i in (0..include.number) %}
+        <tr>
+            {% capture release_time %}{{ site.project.releases[recent_new_release_index].date | date: '%s' }}{% endcapture %}
+            {% capture post_time %}{{ site.posts[recent_new_post_index].date | date: '%s' }}{% endcapture %}
+            {% if release_time > post_time %}
+            {% assign release = site.project.releases[recent_new_release_index] %}
+            <td>{{ release.date | date_to_string }}</td>
+            <td><a href="{{ release.url }}">Srain {{ release.version }} released</a></td>
+            {% capture _ %}{% increment recent_new_release_index %}{% endcapture %}
+            {% else %}
+            {% assign post = site.posts[recent_new_post_index] %}
+            <td>{{ post.date | date_to_string }}&ensp;</td>
+            <td><a href="{{ post.url }}">{{ post.title }}</td>
+            {% capture _ %}{% increment recent_new_post_index %}{% endcapture %}
+            {% endif %}
+        </tr>
+        {% endfor %}
+        <tr>
+            <td></td>
+            <td><a href="{{ site.baseurl }}/news">More news...</a></td> 
+        </tr>
+    </tbody>
+</table>

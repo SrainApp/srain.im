@@ -1,0 +1,59 @@
+---
+title: News
+layout: default
+---
+
+<header>
+    <div class="container">
+        <div class="page-header">
+            <h1>{{ page.title }}</h1>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        {% comment %}
+        FIXME: As https://shopify.github.io/liquid/tags/variable/ said,
+        initial value of incrementis 0, but actually it is 1,
+        use additional decrement to fix value to 0 for now.
+        {% endcomment %}
+        {% capture _ %}{% decrement new_release_index %}{% endcapture %}
+        {% capture _ %}{% decrement new_post_index %}{% endcapture %}
+        {% capture _ %}{% increment new_release_index %}{% endcapture %}
+        {% capture _ %}{% increment new_post_index %}{% endcapture %}
+
+        {% capture num %} {{ site.posts.size | plus: site.project.releases.size | minus: 1 }} {% endcapture %}
+        {% for i in (0..num) %}
+        {% capture release_time %}{{ site.project.releases[new_release_index].date | date: '%s' }}{% endcapture %}
+        {% capture post_time %}{{ site.posts[new_post_index].date | date: '%s' }}{% endcapture %}
+        <div class="panel panel-default">
+            {% if release_time > post_time %}
+            {% assign release = site.project.releases[new_release_index] %}
+            <div class="panel-heading">
+                <h3>
+                    <a href="{{ release.url }}">Srain {{ release.version }} released</a>
+                    <small>{{ release.date | date_to_string }}</small>
+                </h3>
+            </div>
+            <div class="panel-body">
+                <p>{{ release.notes | markdownify }}</p>
+            </div>
+            {% capture _ %}{% increment new_release_index %}{% endcapture %}
+            {% else %}
+            {% assign post = site.posts[new_post_index] %}
+            <div class="panel-heading">
+                <h3>
+                    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                    <small>{{ post.date | date_to_string }}</small>
+                </h3>
+            </div>
+            <div class="panel-body">
+                <p>{{ post.excerpt | strip_html }} </p>
+            </div>
+            {% capture _ %}{% increment new_post_index %}{% endcapture %}
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</main>
