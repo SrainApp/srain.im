@@ -23,7 +23,7 @@ layout: default
         {% capture _ %}{% increment new_release_index %}{% endcapture %}
         {% capture _ %}{% increment new_post_index %}{% endcapture %}
 
-        {% capture num %}{{ site.posts.size | plus site.project.releases.size }}{% endcapture %}
+        {% capture num %} {{ site.posts.size | plus: site.project.releases.size | minus: 1 }} {% endcapture %}
         {% for i in (0..num) %}
         {% capture release_time %}{{ site.project.releases[new_release_index].date | date: '%s' }}{% endcapture %}
         {% capture post_time %}{{ site.posts[new_post_index].date | date: '%s' }}{% endcapture %}
