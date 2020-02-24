@@ -15,12 +15,12 @@ use additional decrement to fix value to 0 for now.
             {% capture post_time %}{{ site.posts[recent_new_post_index].date | date: '%s' }}{% endcapture %}
             {% if release_time > post_time %}
             {% assign release = site.project.releases[recent_new_release_index] %}
-            <td>{{ release.date | date_to_string }}</td>
+            <td>{{ release.date | date_to_string }}&nbsp;&nbsp;</td>
             <td><a href="{{ release.url }}">Srain {{ release.version }} released</a></td>
             {% capture _ %}{% increment recent_new_release_index %}{% endcapture %}
             {% else %}
             {% assign post = site.posts[recent_new_post_index] %}
-            <td>{{ post.date | date_to_string }}&ensp;</td>
+            <td>{{ post.date | date_to_string }}&nbsp;&nbsp;</td>
             <td><a href="{{ post.url }}">{{ post.title }}</td>
             {% capture _ %}{% increment recent_new_post_index %}{% endcapture %}
             {% endif %}
