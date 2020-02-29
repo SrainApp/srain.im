@@ -7,7 +7,7 @@ use additional decrement to fix value to 0 for now.
 {% capture _ %}{% decrement recent_new_post_index %}{% endcapture %}
 {% capture _ %}{% increment recent_new_release_index %}{% endcapture %}
 {% capture _ %}{% increment recent_new_post_index %}{% endcapture %}
-<table>
+<table class="recent-news">
     <tbody>
         {% for i in (0..include.number) %}
         <tr>

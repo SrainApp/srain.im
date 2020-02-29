@@ -75,6 +75,13 @@ code {
 	display: none;
 }
 
+/* Recent news */
+.recent-news td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 /* Content of introduction is html of README which fetched from github, hide
  * the main title and remove some duplicated.
  */
