@@ -6,10 +6,10 @@ exclude:
     - Makefile
     - _hg
 
-# Repositoriy informations
+# Project repositoriy informations
 name: Srain
 github: SrainApp/srain
-logo: https://raw.githubusercontent.com/SrainApp/srain/master/data/icons/scalable/srain.png
+logo: /assets/images/logo.png
 download: http://doc.srain.im/en/latest/install.html
 documentation: https://doc.srain.im
 screenshots:
