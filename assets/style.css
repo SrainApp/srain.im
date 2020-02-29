@@ -35,6 +35,59 @@ code {
     color: #4a88ab;
 }
 
+/* Comments */
+.github-comments .comment-content img {
+    width: 100%;
+    height: 100%;
+}
+#gh-comments-list li {
+	margin: 0;
+	padding: 1.5em 0;
+	display: flex;
+	flex-wrap: wrap;
+	border-top: 1px solid #aaa;
+}
+#gh-comments-list li > a.user {
+	width: 5em;
+	height: 5em;
+	overflow: hidden;
+	padding: 3px;
+}
+#gh-comments-list li > a.user img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+#gh-comments-list li .comment-content {
+	padding: 0 1.5em;
+    max-width: 90%;
+}
+#gh-comments-list li > a.comment-url {
+	width: 100%;
+	text-align: right;
+	opacity: .8;
+}
+#gh-comments-list li > a.comment-url:hover {
+	opacity: 1;
+}
+#no-comments-found {
+	display: none;
+}
+
+/* Posts */
+.post-content img {
+    width: 80%;
+    height: 80%;
+}
+
+/* Recent news */
+.recent-news td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 /* Content of introduction is html of README which fetched from github, hide
  * the main title and remove some duplicated.
  */
