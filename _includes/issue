@@ -1,0 +1,1 @@
+<a href="{{ site.project.url}}/issues/{{ include.id }}">#{{ include.id }}</a>
