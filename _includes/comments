@@ -1,7 +1,7 @@
 <!-- Orihttps://github.com/aristath/aristath.github.com/blob/master/_includes/comments.html -->
 <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
 <script>
-const GH_API_URL = 'https://api.github.com/repos/SrainApp/srain/issues/{{ page.comments_id }}/comments'; // ?client_id={{ site.data.settings.gh_api.ci }}&client_secret={{ site.data.settings.gh_api.cs }}
+const GH_API_URL = 'https://api.github.com/repos/SrainApp/srain.im/issues/{{ page.comments_id }}/comments'; // ?client_id={{ site.data.settings.gh_api.ci }}&client_secret={{ site.data.settings.gh_api.cs }}
 
 let request = new XMLHttpRequest();
 request.open( 'GET', GH_API_URL, true );
@@ -62,15 +62,11 @@ request.send();
 
 <hr>
 
-<div class="container">
-    <div class="github-comments panel panel-default">
-        <div class="panel-heading">
-            <h2>Comments</h2>
-        </div>
-        <div class="panel-body">
-            <ul id="gh-comments-list" class="list-unstyled"></ul>
-            <p id="no-comments-found">No comments found for this article. Comments posted before 2019-09-15 are no longer available due to a system migration since I no longer use Disqus for comments.</p>
-            <p id="leave-a-comment">Join the discussion for this article on <a href="https://github.com/SrainApp/srain/issues/{{ page.comments_id }}">this ticket</a>. Comments appear on this page instantly.</p>
-        </div>
+<div class="github-comments container">
+    <h2>Comments</h2>
+    <div>
+        <ul id="gh-comments-list" class="list-unstyled"></ul>
+        <p id="no-comments-found">No comments found for this article.</p>
+        <p id="leave-a-comment">Join the discussion for this article on <a href="https://github.com/SrainApp/srain.im/issues/{{ page.comments_id }}">this ticket</a>. Comments appear on this page instantly.</p>
     </div>
 </div>
