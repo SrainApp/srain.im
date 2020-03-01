@@ -1,6 +1,6 @@
 commit:
 	git checkout gh-pages && \
-		rm -r ./assets && \
+		rm -r ./assets ./2020 && \
 		mv _site/* . && \
 		git pull && \
 		git add . && \
