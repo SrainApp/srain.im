@@ -34,7 +34,7 @@ chatting is always good.
 Srain is fully open source under GPLv3 license.
 You can get software and [source code]({{ site.project.url }}) for free.
 Srain supports both Linux, Windows, BSD and macOS, please checkout
-[Installation Guide](doc.srain.im/en/latest/install.html) for more details.
+[Installation Guide](http://doc.srain.im/en/latest/install.html) for more details.
 
 > For Linux user, Srain is available on offical repository of
 > [flathub](https://flathub.org/apps/details/im.srain.Srain),
@@ -142,7 +142,7 @@ Traditional IRC protocol is too simple to meet the needs of modern IM users.
 So client should do more, plugin system is a good idea to provide extra functions.
 
 As Srain is a GTK application, I plan to use [Libpeas](https://wiki.gnome.org/Projects/Libpeas)
-to construct Srain's plguin system and provide at least tow kind of plugin:
+to construct Srain's plugin system and provide at least tow kind of plugin:
 auto-pastebin(paste your file/image and return URL to your input entry) and
 message renderer(render IRC message as as you wish).
 
