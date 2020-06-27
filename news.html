@@ -69,6 +69,37 @@
             
             <div class="panel-heading">
                 <h3>
+                    <a href="https://github.com/SrainApp/srain/releases/tag/1.1.1">Srain 1.1.1 released</a>
+                    <small>27 Jun 2020</small>
+                </h3>
+            </div>
+            <div class="panel-body">
+                <p><ul>
+  <li>Changes:
+    <ul>
+      <li>Improve auto-scroll policy of message list (#255)</li>
+    </ul>
+  </li>
+  <li>Bug fixes:
+    <ul>
+      <li>Fix TLS certificate verification error on glib-networking 2.64.3 (#251)</li>
+      <li>Fix crash when connecting to an invalid host (#234)</li>
+    </ul>
+  </li>
+</ul>
+</p>
+            </div>
+            
+            
+        </div>
+        
+        
+        
+        <div class="panel panel-default">
+            
+            
+            <div class="panel-heading">
+                <h3>
                     <a href="https://github.com/SrainApp/srain/releases/tag/1.1.0">Srain 1.1.0 released</a>
                     <small>24 May 2020</small>
                 </h3>
@@ -373,15 +404,15 @@
 <ul>
   <li>Changed:
     <ul>
-      <li>Change default application ID to <code class="highlighter-rouge">im.srain.Srain</code></li>
+      <li>Change default application ID to <code class="language-plaintext highlighter-rouge">im.srain.Srain</code></li>
     </ul>
   </li>
   <li>Added:
     <ul>
       <li>CTCP support, including request &amp; response CLIENTINFO, FINGER, PING, SOURCE, TIME, VERSION, USERINFO messages. DCC message is <strong>not</strong> yet supported. Use command <a href="http://doc.srain.im/en/latest/commands.html#commands-ctcp">/ctcp</a> for sending a CTCP request</li>
-      <li>Login method support, you can specify it by configuration file option <code class="highlighter-rouge">server.login_method</code>:
+      <li>Login method support, you can specify it by configuration file option <code class="language-plaintext highlighter-rouge">server.login_method</code>:
         <ul>
-          <li><code class="highlighter-rouge">sasl_plain</code>: SASL PLAIN authentication support, will use <code class="highlighter-rouge">server.user.username</code> as identity, and use <code class="highlighter-rouge">server.user.passwd</code> as password</li>
+          <li><code class="language-plaintext highlighter-rouge">sasl_plain</code>: SASL PLAIN authentication support, will use <code class="language-plaintext highlighter-rouge">server.user.username</code> as identity, and use <code class="language-plaintext highlighter-rouge">server.user.passwd</code> as password</li>
         </ul>
       </li>
       <li>Added documentation <a href="http://doc.srain.im/en/stable/support.html">Support Tables</a> used to show Srain’s features, inspried by <a href="https://ircv3.net/software/clients.html">IRCv3 Client Support</a></li>
@@ -393,10 +424,10 @@
   </li>
   <li>Improved:
     <ul>
-      <li>Fixed a logical error in IRC message parser: all parameters are equal whether matched by <code class="highlighter-rouge">&lt;middle&gt;</code> or <code class="highlighter-rouge">&lt;trailing&gt;</code>, thanks to @DanielOaks</li>
+      <li>Fixed a logical error in IRC message parser: all parameters are equal whether matched by <code class="language-plaintext highlighter-rouge">&lt;middle&gt;</code> or <code class="language-plaintext highlighter-rouge">&lt;trailing&gt;</code>, thanks to @DanielOaks</li>
       <li>Improved connection state control, you can smoothly disconnect/quit from server even it is unresponsive</li>
-      <li>Fixed truncated message output by <a href="http://doc.srain.im/en/latest/commands.html#commands-server">/server</a> <code class="highlighter-rouge">list</code> subcommand</li>
-      <li>Fixed crash at <code class="highlighter-rouge">g_type_check_instance()</code> under GLib 2.54.3+</li>
+      <li>Fixed truncated message output by <a href="http://doc.srain.im/en/latest/commands.html#commands-server">/server</a> <code class="language-plaintext highlighter-rouge">list</code> subcommand</li>
+      <li>Fixed crash at <code class="language-plaintext highlighter-rouge">g_type_check_instance()</code> under GLib 2.54.3+</li>
       <li>Fixed: Do not free a SrianServerBuffer which has non-empty buffer</li>
       <li>Ensure the QUIT message can be sent before application shutdown</li>
       <li>Removed entry from desktop file, thanks to @TingPing</li>
@@ -430,10 +461,10 @@
     <p>Changed:</p>
 
     <ul>
-      <li>Configurable file option <code class="highlighter-rouge">tls_not_verify</code> in <code class="highlighter-rouge">irc</code> block in <code class="highlighter-rouge">server</code>
-block is renamed to <code class="highlighter-rouge">tls_noverify</code>, old option name is still supported</li>
-      <li>Command option <code class="highlighter-rouge">tls-not-verify</code> for <code class="highlighter-rouge">/server</code> and
-<code class="highlighter-rouge">/connect</code> is renamed to <code class="highlighter-rouge">tls-noverify</code>, old option name
+      <li>Configurable file option <code class="language-plaintext highlighter-rouge">tls_not_verify</code> in <code class="language-plaintext highlighter-rouge">irc</code> block in <code class="language-plaintext highlighter-rouge">server</code>
+block is renamed to <code class="language-plaintext highlighter-rouge">tls_noverify</code>, old option name is still supported</li>
+      <li>Command option <code class="language-plaintext highlighter-rouge">tls-not-verify</code> for <code class="language-plaintext highlighter-rouge">/server</code> and
+<code class="language-plaintext highlighter-rouge">/connect</code> is renamed to <code class="language-plaintext highlighter-rouge">tls-noverify</code>, old option name
 is still supported</li>
     </ul>
   </li>
@@ -486,7 +517,7 @@ is still supported</li>
     <p>Added:</p>
 
     <ul>
-      <li>mIRC color support, can be configured via <code class="highlighter-rouge">render_mirc_color</code> option</li>
+      <li>mIRC color support, can be configured via <code class="language-plaintext highlighter-rouge">render_mirc_color</code> option</li>
     </ul>
   </li>
   <li>
@@ -531,8 +562,8 @@ while operation is not successful</li>
 
     <ul>
       <li>Added GPL copyright statements</li>
-      <li><code class="highlighter-rouge">RPL_CHANNEL_URL</code> (328) message support</li>
-      <li>Command line options support, type <code class="highlighter-rouge">srain -h</code> for help message</li>
+      <li><code class="language-plaintext highlighter-rouge">RPL_CHANNEL_URL</code> (328) message support</li>
+      <li>Command line options support, type <code class="language-plaintext highlighter-rouge">srain -h</code> for help message</li>
       <li>Support for Creating server and joining channel from IRC URL</li>
       <li>New dependency libsoup</li>
       <li>Add reconnect timer: if connection fails, Srain will wait for 5 seconds
@@ -577,9 +608,9 @@ then try to connect again. If it still fails, waiting time will increase by
 
     <ul>
       <li>The third time of refactor ;-)</li>
-      <li>New command parser, for the syntax, refer to <code class="highlighter-rouge">commands-syntax</code>.</li>
+      <li>New command parser, for the syntax, refer to <code class="language-plaintext highlighter-rouge">commands-syntax</code>.</li>
       <li>Changed the format of Chat log</li>
-      <li>The <code class="highlighter-rouge">/relay</code> command doesn’t support custom delimiter, this function will
+      <li>The <code class="language-plaintext highlighter-rouge">/relay</code> command doesn’t support custom delimiter, this function will
 be implemented as python plugin in the future</li>
       <li>Use reStructuredText for document instead of Markdown</li>
     </ul>
@@ -591,12 +622,12 @@ be implemented as python plugin in the future</li>
       <li>Message filter: mechanism for filtering message</li>
       <li>Message Decorator: mechanism for changing message</li>
       <li>Install script for Gentoo, thanks to @rtlanceroad !</li>
-      <li>New command <code class="highlighter-rouge">/rignore</code> for ignore message using regular
+      <li>New command <code class="language-plaintext highlighter-rouge">/rignore</code> for ignore message using regular
 expression, thanks to @zwindl !</li>
       <li>Config file support</li>
       <li>Configurable log module, more convenient for developing and reporting issue</li>
       <li>New Return value type, for more friendly error reporting</li>
-      <li>New command <code class="highlighter-rouge">commands-server</code> for IRC servers management</li>
+      <li>New command <code class="language-plaintext highlighter-rouge">commands-server</code> for IRC servers management</li>
       <li>Srain home page is available at: https://srain.im</li>
       <li>Srain help documentation is available at: https://doc.srain.im</li>
     </ul>

@@ -138,7 +138,7 @@ customize the theme by writing CSS.</p>
 
 <p>By default, Srain provides two
 <a href="https://github.com/SrainApp/srain/tree/master/data/themes">builtin themes</a>:
-<code class="highlighter-rouge">default-bubble</code> and <code class="highlighter-rouge">default-bubble-dark</code> which works well with most popular
+<code class="language-plaintext highlighter-rouge">default-bubble</code> and <code class="language-plaintext highlighter-rouge">default-bubble-dark</code> which works well with most popular
 GTK themes.</p>
 
 <p><img src="/assets/posts/2020-02-29-introducing-srain/theme.png" /></p>
@@ -171,10 +171,10 @@ for more details.</p>
 <p>Message filter allows ignore one’s message by regular expression match.
 (<a href="http://doc.srain.im/en/stable/commands.html#ignore-unignore">Ignore by nickname</a>
 is supported of course).
-Please refers to <a href="http://doc.srain.im/en/stable/commands.html#commands-filter"><code class="highlighter-rouge">/filter</code></a>.</p>
+Please refers to <a href="http://doc.srain.im/en/stable/commands.html#commands-filter"><code class="language-plaintext highlighter-rouge">/filter</code></a>.</p>
 
 <p>Message renderer allows user modify one’s message by regular expression group capture.
-Please refers to <a href="http://doc.srain.im/en/stable/commands.html#commands-render"><code class="highlighter-rouge">/render</code></a>.</p>
+Please refers to <a href="http://doc.srain.im/en/stable/commands.html#commands-render"><code class="language-plaintext highlighter-rouge">/render</code></a>.</p>
 
 <p><strong>One of the application of message renderer is “relay message transform”</strong>.</p>
 
@@ -185,14 +185,14 @@ is the named of the telegram user.</p>
 
 <p><img src="/assets/posts/2020-02-29-introducing-srain/render-message-before.png" /></p>
 
-<p>Run command <code class="highlighter-rouge">/pattern add normal-relay \[(?&lt;sender&gt;[^:]+?)\] (?&lt;content&gt;.*)</code>
-and <code class="highlighter-rouge">/render telegram normal-relay</code>.
-<code class="highlighter-rouge">\[(?&lt;sender&gt;[^:]+?)\] (?&lt;content&gt;.*)</code> is a regular expression, which has two
-named group <code class="highlighter-rouge">sender</code> and <code class="highlighter-rouge">content</code>, when an IRC message matched by this expression:</p>
+<p>Run command <code class="language-plaintext highlighter-rouge">/pattern add normal-relay \[(?&lt;sender&gt;[^:]+?)\] (?&lt;content&gt;.*)</code>
+and <code class="language-plaintext highlighter-rouge">/render telegram normal-relay</code>.
+<code class="language-plaintext highlighter-rouge">\[(?&lt;sender&gt;[^:]+?)\] (?&lt;content&gt;.*)</code> is a regular expression, which has two
+named group <code class="language-plaintext highlighter-rouge">sender</code> and <code class="language-plaintext highlighter-rouge">content</code>, when an IRC message matched by this expression:</p>
 
 <ul>
-  <li>The text in <code class="highlighter-rouge">sender</code> group will become the sender of rendered messsage,</li>
-  <li>The text in <code class="highlighter-rouge">content</code> group will become the content of rendered messsage.</li>
+  <li>The text in <code class="language-plaintext highlighter-rouge">sender</code> group will become the sender of rendered messsage,</li>
+  <li>The text in <code class="language-plaintext highlighter-rouge">content</code> group will become the content of rendered messsage.</li>
   <li>The orginal message sender will become the remark of rendered messsage.</li>
 </ul>
 
